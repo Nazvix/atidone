@@ -29,6 +29,10 @@ jobs:
 
       - name: Build application
         run: pnpm build
+        env: 
+          NUXT_OAUTH_GOOGLE_CLIENT_ID: ${{ secrets.NUXT_OAUTH_GOOGLE_CLIENT_ID }}
+          NUXT_OAUTH_GOOGLE_CLIENT_SECRET: ${{ secrets.NUXT_OAUTH_GOOGLE_CLIENT_SECRET }}
+          NUXT_OAUTH_GOOGLE_REDIRECT_URI: ${{ env.NUXT_OAUTH_GOOGLE_REDIRECT_URI }}
 
       - name: Deploy to NuxtHub
         uses: nuxt-hub/action@v1
