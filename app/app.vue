@@ -4,6 +4,8 @@ import type { DropdownItem } from '#ui/types'
 const { loggedIn, user, clear } = useUserSession()
 const colorMode = useColorMode()
 
+// Test8g changes
+
 watch(loggedIn, () => {
   if (!loggedIn.value) {
     navigateTo('/')
