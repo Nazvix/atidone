@@ -74,6 +74,15 @@ const items = [
           size="xs"
           external
         />
+        <UButton
+          v-if="!loggedIn"
+          to="/api/auth/google"
+          icon="i-simple-icons-google"
+          label="Login with Google"
+          color="black"
+          size="xs"
+          external
+        />
         <div
           v-else
           class="flex flex-wrap -mx-2 sm:mx-0"
